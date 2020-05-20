@@ -1,0 +1,77 @@
+{
+  "name": "vue-video-player-vjs",
+  "version": "1.0.0",
+  "description": "video.js component for Vue",
+  "author": "jekorx",
+  "main": "lib/vue-video-player-vjs.js",
+  "unpkg": "lib/vue-video-player-vjs.js",
+  "jsnext:main": "lib/vue-video-player-vjs.js",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "jspm": {
+    "main": "lib/vue-video-player-vjs.js",
+    "registry": "npm",
+    "format": "esm"
+  },
+  "private": false,
+  "scripts": {
+    "dev": "webpack-dev-server --inline --progress --colors --config build/webpack.dev.conf.js",
+    "start": "npm run dev",
+    "build": "npm run build:spa && npm run build:ssr",
+    "build:spa": "webpack --config build/webpack.prod.conf.js",
+    "build:ssr": "babel src/video-player/ssr.js --out-file lib/ssr.js",
+    "build:show": "webpack --config build/webpack.show.conf.js"
+  },
+  "dependencies": {
+    "object-assign": "^4.1.1",
+    "video.js": "^7.7.6",
+    "videojs-hotkeys": "^0.2.25"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.1.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "postcss-loader": "^2.1.6",
+    "uglifyjs-webpack-plugin": "^1.3.0",
+    "vue": "^2.5.17",
+    "vue-loader": "^15.2.7",
+    "vue-style-loader": "^4.1.1",
+    "vue-template-compiler": "^2.5.17",
+    "webpack": "^4.16.4",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5",
+    "webpack-merge": "^4.1.4"
+  },
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jekorx/vue-video-player-vjs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jekorx/vue-video-player-vjs/issues"
+  },
+  "homepage": "https://github.com/jekorx/vue-video-player-vjs#readme",
+  "keywords": [
+    "vue-video-player",
+    "vue video player",
+    "video player",
+    "vue player",
+    "vue video"
+  ],
+  "license": "MIT"
+}
