@@ -84,11 +84,11 @@ export default {
 ```javascript
 // @/plugins/vue-video-player-vjs.js
 import Vue from 'vue'
-import VideoPlayer from 'vue-video-player/dist/ssr'
+import VideoPlayer from 'vue-video-player-vjs/lib/ssr'
 import 'vue-video-player-vjs/styles/index.css'
 
 export default () => {
-  Vue.component(VideoPlayer.name, VideoPlayer)
+  Vue.use(VideoPlayer)
 }
 
 // nuxt.config.js
@@ -99,9 +99,7 @@ plugins: [
 ```javascript
 <template>
   <!-- SSR 使用组件 -->
-  <div class="vjs-custom-skin"
-    :playsinline="true"
-    v-video-player:currentVideoPlayer="playerOptions">
+  <div class="vjs-custom-skin" :playsinline="true" v-video-player:currentVideoPlayer="playerOptions">
   </div>
 </template>
 <script>

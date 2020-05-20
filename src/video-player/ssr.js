@@ -189,7 +189,7 @@ const videoPlayerDirective = globalOptions => {
 const VideoPlayer = videoPlayerDirective({})
 
 // Global quill default options
-VideoPlayer.install = function (Vue, globalOptions = {
+const install = function (Vue, globalOptions = {
   options: {},
   events: []
 }) {
@@ -197,4 +197,7 @@ VideoPlayer.install = function (Vue, globalOptions = {
   Vue.directive('video-player', videoPlayerDirective(globalOptions))
 }
 
-export default VideoPlayer
+const VueVideoPlayer = { videojs, VideoPlayer, install }
+
+export default VueVideoPlayer
+export { videojs, VideoPlayer, install }

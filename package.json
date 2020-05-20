@@ -1,6 +1,6 @@
 {
   "name": "vue-video-player-vjs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "video.js component for Vue",
   "author": "jekorx",
   "main": "lib/vue-video-player-vjs.js",
