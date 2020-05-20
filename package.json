@@ -1,6 +1,6 @@
 {
   "name": "vue-video-player-vjs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "video.js component for Vue",
   "author": "jekorx",
   "main": "lib/vue-video-player-vjs.js",
@@ -8,7 +8,7 @@
   "jsnext:main": "lib/vue-video-player-vjs.js",
   "files": [
     "lib",
-    "src"
+    "styles"
   ],
   "jspm": {
     "main": "lib/vue-video-player-vjs.js",
