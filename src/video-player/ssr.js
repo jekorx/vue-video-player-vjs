@@ -8,6 +8,11 @@
 import videojs from 'video.js'
 import objectAssign from 'object-assign'
 
+// hls.js support
+if (typeof window !== 'undefined') {
+  require('./video.hlsjs')
+}
+
 // as of videojs
 const DEFAULT_EVENTS = [
   'loadeddata',

@@ -1,6 +1,6 @@
 {
   "name": "vue-video-player-vjs",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "video.js component for Vue",
   "author": "jekorx",
   "main": "lib/vue-video-player-vjs.js",
@@ -21,10 +21,11 @@
     "start": "npm run dev",
     "build": "npm run build:spa && npm run build:ssr",
     "build:spa": "webpack --config build/webpack.prod.conf.js",
-    "build:ssr": "babel src/video-player/ssr.js --out-file lib/ssr.js",
+    "build:ssr": "babel src/video-player/ssr.js --out-file lib/ssr.js && babel src/video-player/video.hlsjs.js --out-file lib/video.hlsjs.js",
     "build:show": "webpack --config build/webpack.show.conf.js"
   },
   "dependencies": {
+    "hls.js": "^0.13.2",
     "object-assign": "^4.1.1",
     "video.js": "^7.7.6",
     "videojs-hotkeys": "^0.2.25"

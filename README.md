@@ -27,7 +27,17 @@ import 'vue-video-player-vjs/styles/index.css'
 Vue.use(VideoPlayer, /* {
   options: global default options,
   events: global videojs events
-} */)
+} */{
+  options: {
+    languages: {
+      // 参考，video.js/dist/lang/zh-CN.json，并增加末尾两行画中画中文
+      'zh-CN': {
+        'Picture-in-Picture': '打开画中画模式',
+        'Exit Picture-in-Picture': '退出画中画模式'
+      }
+    }
+  }
+})
 ```
 > 局部引入依赖，SPA，非SSR  
 ```javascript
@@ -89,9 +99,18 @@ import 'video.js/dist/video-js.css'
 import 'vue-video-player-vjs/styles/index.css'
 
 export default () => {
-  Vue.use(VideoPlayer)
+  Vue.use(VideoPlayer, {
+    options: {
+      languages: {
+        // 参考，video.js/dist/lang/zh-CN.json，并增加末尾两行画中画中文
+        'zh-CN': {
+          'Picture-in-Picture': '打开画中画模式',
+          'Exit Picture-in-Picture': '退出画中画模式'
+        }
+      }
+    }
+  })
 }
-
 // nuxt.config.js
 plugins: [
   '@/plugins/vue-video-player-vjs'

@@ -1,11 +1,12 @@
 /*
-* Vue-Video-Player ssr.js
-* Author: surmon@foxmail.com
-* Github: https://github.com/surmon-china/vue-video-player
-* Adapted from Videojs (https://github.com/videojs/video.js)
-*/
+ * Vue-Video-Player ssr.js
+ * Author: surmon@foxmail.com
+ * Github: https://github.com/surmon-china/vue-video-player
+ * Adapted from Videojs (https://github.com/videojs/video.js)
+ */
 
 import VideoPlayer from './player.vue'
+import './video.hlsjs'
 
 VideoPlayer.install = function (Vue, config) {
   if (config) {
