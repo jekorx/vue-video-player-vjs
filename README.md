@@ -70,7 +70,10 @@ export default {
         controls: true, // 控制条
         preload: 'auto', // 预加载
         language: 'zh-CN',
+        // fluid: false, // 自动判断窗口大小，false：可以设置固定尺寸，常用来设置高度，宽度通过外部容器约束
+        // height: '480px',
         fluid: true,
+        aspectRatio: '16:9', // 或者直接设置宽高比，fluid需要设置为true
         notSupportedMessage: '此视频暂时无法播放，请稍后再试',
         // hls直播
         sources: [{
@@ -132,7 +135,10 @@ export default {
         controls: true, // 控制条
         preload: 'auto', // 预加载
         language: 'zh-CN',
+        // fluid: false, // 自动判断窗口大小，false：可以设置固定尺寸，常用来设置高度，宽度通过外部容器约束
+        // height: '480px',
         fluid: true,
+        aspectRatio: '16:9', // 或者直接设置宽高比，fluid需要设置为true
         notSupportedMessage: '此视频暂时无法播放，请稍后再试',
         // hls直播
         sources: [{

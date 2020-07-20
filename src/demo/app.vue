@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="width: 800px">
     <VideoPlayer
       class="vjs-custom-skin"
       :options="playerOptions"
@@ -24,6 +24,7 @@ export default {
         preload: 'auto', // 预加载
         language: 'zh-CN',
         fluid: true,
+        aspectRatio: '16:9', // 设置宽高比，fluid需为true
         notSupportedMessage: '此视频暂时无法播放，请稍后再试',
         sources: [{
           withCredentials: false,
