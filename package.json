@@ -1,6 +1,6 @@
 {
   "name": "vue-video-player-vjs",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "video.js component for Vue",
   "author": "jekorx",
   "main": "lib/vue-video-player-vjs.js",
@@ -39,7 +39,8 @@
     "babel-preset-stage-2": "^6.24.1",
     "css-loader": "^1.0.0",
     "html-webpack-plugin": "^3.2.0",
-    "postcss-loader": "^2.1.6",
+    "postcss": "^8.3.0",
+    "postcss-loader": "^4.3.0",
     "uglifyjs-webpack-plugin": "^1.3.0",
     "vue": "^2.5.17",
     "vue-loader": "^15.2.7",
